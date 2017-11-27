@@ -23,7 +23,7 @@ public class DemoActivity extends Activity {
 
   @OnClick({ R.id.hello, R.id.hey, R.id.hi })
   public void greetingClicked(Button button) {
-    Timber.i("A button with ID %s was clicked to say '%s'.", button.getId(), button.getText());
+    Timber.tag("LifeCycle").i("A button with ID %s was clicked to say '%s'.", button.getId(), button.getText());
     Toast.makeText(this, "Check logcat for a greeting!", LENGTH_SHORT).show();
   }
 }
